@@ -14,7 +14,7 @@ class Converter extends BaseConverterApiClient
     public function audio($conversionType, $filePath)
     {
         if (!in_array($conversionType, explode(', ', self::AUDIO_CONVERT_TYPES))) {
-            throw new \Exception("Invalid conversion type: {$conversionType}");
+            throw new \Exception("Invalid conversion type: {$conversionType}. Supported types: " . self::AUDIO_CONVERT_TYPES);
         }
 
         $endpoint = "/do-convert/{$conversionType}";
@@ -24,7 +24,7 @@ class Converter extends BaseConverterApiClient
     public function video($conversionType, $filePath)
     {
         if (!in_array($conversionType, explode(', ', self::VIDEO_CONVERT_TYPES))) {
-            throw new \Exception("Invalid conversion type: {$conversionType}");
+            throw new \Exception("Invalid conversion type: {$conversionType}. Supported types: " . self::VIDEO_CONVERT_TYPES);
         }
 
         $endpoint = "/video/{$conversionType}";
@@ -34,7 +34,7 @@ class Converter extends BaseConverterApiClient
     public function image($conversionType, $filePath)
     {
         if (!in_array($conversionType, explode(', ', self::IMAGE_CONVERT_TYPES))) {
-            throw new \Exception("Invalid conversion type: {$conversionType}");
+            throw new \Exception("Invalid conversion type: {$conversionType}. Supported types: " . self::IMAGE_CONVERT_TYPES);
         }
 
         $endpoint = "/do-convert/{$conversionType}";
@@ -44,7 +44,7 @@ class Converter extends BaseConverterApiClient
     public function document($conversionType, $filePath)
     {
         if (!in_array($conversionType, explode(', ', self::DOCUMENT_CONVERT_TYPES))) {
-            throw new \Exception("Invalid conversion type: {$conversionType}");
+            throw new \Exception("Invalid conversion type: {$conversionType}. Supported types: " . self::DOCUMENT_CONVERT_TYPES);
         }
 
         $endpoint = "/documents/{$conversionType}";
@@ -54,7 +54,7 @@ class Converter extends BaseConverterApiClient
     public function font($conversionType, $filePath)
     {
         if (!in_array($conversionType, explode(', ', self::FONT_CONVERT_TYPES))) {
-            throw new \Exception("Invalid conversion type: {$conversionType}");
+            throw new \Exception("Invalid conversion type: {$conversionType}. Supported types: " . self::FONT_CONVERT_TYPES);
         }
 
         $endpoint = "/fonts/{$conversionType}";
@@ -70,7 +70,7 @@ class Converter extends BaseConverterApiClient
     public function audio_effect($effectType, $filePath, $params = [])
     {
         if (!in_array($effectType, explode(', ', self::AUDIO_EFFECTS))) {
-            throw new \Exception("Invalid audio effect type: {$effectType}");
+            throw new \Exception("Invalid audio effect type: {$effectType}. Supported types: " . self::AUDIO_EFFECTS);
         }
 
         $endpoint = "/{$effectType}";
