@@ -3,7 +3,7 @@
 namespace Tigerra;
 
 
-class ConverterFileDownloader extends BaseApiClient
+class ConverterFileDownloader extends BaseConverterApiClient
 {
     public function downloadFile($downloadUrl, $outputPath)
     {
