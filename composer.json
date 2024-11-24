@@ -1,0 +1,16 @@
+{
+    "name": "tigerra/convert",
+    "description": "High-Performance File Conversion API for Developers & Businesses.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Tigerra\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tigerra"
+        }
+    ],
+    "require": {}
+}
